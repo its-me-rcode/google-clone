@@ -16,11 +16,14 @@ function Search({ hideButtons = false }) {
 
   const search = (e) => {
     e.preventDefault();
-     console.log(input);
+    
+    console.log(input);
+    
     dispatch({
-      type: actionTypes.SET_SEARCH_TERM,
+      type: "SET_SEARCH_TERM",
       term: input,
     });
+
     history.push("/search");
   };
 
